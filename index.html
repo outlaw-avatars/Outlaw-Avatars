@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outlaw Avatars</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding-top: 50px;
+        }
+        .button {
+            background-color: #ffcc00;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            margin: 10px;
+        }
+        .button:hover {
+            background-color: #e6b800;
+        }
+        .character-preview {
+            width: 300px;
+            height: 300px;
+            background-color: gray;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Outlaw Avatars</h1>
+        <div class="character-preview">Character Preview</div>
+        <button class="button" onclick="generateRandomCharacter()">Random Character</button>
+        <button class="button" onclick="customizeCharacter()">Customize</button>
+        <button class="button" onclick="chooseBackground()">Choose Background</button>
+    </div>
+
+    <script>
+        function generateRandomCharacter() {
+            alert("Random character generated!");
+        }
+        function customizeCharacter() {
+            alert("Customization feature coming soon!");
+        }
+        function chooseBackground() {
+            alert("Background selection feature coming soon!");
+        }
+    </script>
+</body>
+</html>
