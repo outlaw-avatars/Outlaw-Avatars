@@ -38,6 +38,13 @@
             justify-content: center;
             font-size: 24px;
         }
+        .customization-menu {
+            display: none;
+            background: #333;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
@@ -45,16 +52,39 @@
         <h1>Welcome to Outlaw Avatars</h1>
         <div class="character-preview">Character Preview</div>
         <button class="button" onclick="generateRandomCharacter()">Random Character</button>
-        <button class="button" onclick="customizeCharacter()">Customize</button>
+        <button class="button" onclick="toggleCustomization()">Customize</button>
         <button class="button" onclick="chooseBackground()">Choose Background</button>
+        
+        <div class="customization-menu" id="customizationMenu">
+            <h2>Customize Your Character</h2>
+            <label for="hair">Hair:</label>
+            <select id="hair">
+                <option value="short">Short</option>
+                <option value="long">Long</option>
+                <option value="bald">Bald</option>
+            </select>
+            <br>
+            <label for="clothing">Clothing:</label>
+            <select id="clothing">
+                <option value="casual">Casual</option>
+                <option value="formal">Formal</option>
+                <option value="streetwear">Streetwear</option>
+            </select>
+            <br>
+            <button class="button" onclick="applyCustomization()">Apply</button>
+        </div>
     </div>
 
     <script>
         function generateRandomCharacter() {
             alert("Random character generated!");
         }
-        function customizeCharacter() {
-            alert("Customization feature coming soon!");
+        function toggleCustomization() {
+            var menu = document.getElementById("customizationMenu");
+            menu.style.display = menu.style.display === "none" ? "block" : "none";
+        }
+        function applyCustomization() {
+            alert("Customization applied!");
         }
         function chooseBackground() {
             alert("Background selection feature coming soon!");
